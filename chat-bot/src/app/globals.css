@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Enhanced Professional Glassy Theme */
+    --background: 224 71% 2%;
+    --foreground: 210 40% 98%;
+    
+    /* Glass morphism cards with subtle transparency */
+    --card: 224 71% 8%;
+    --card-foreground: 210 40% 98%;
+    --card-glass: 210 40% 98% / 0.03;
+    --card-border: 210 40% 98% / 0.08;
+    
+    /* Professional popover styling */
+    --popover: 224 71% 6%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Refined primary colors with subtle gradients */
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glass: 217 91% 60% / 0.1;
+    
+    /* Elegant secondary with purple accent */
+    --secondary: 260 84% 65%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-glass: 260 84% 65% / 0.08;
+    
+    /* Muted tones for professional look */
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 25% 70%;
+    
+    /* Refined accent colors */
+    --accent: 170 100% 50%;
+    --accent-foreground: 210 40% 98%;
+    --accent-glass: 170 100% 50% / 0.1;
+    
+    /* Error states */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Enhanced borders and inputs with glass effect */
+    --border: 210 40% 98% / 0.12;
+    --input: 210 40% 98% / 0.05;
+    --input-border: 210 40% 98% / 0.15;
+    
+    /* Focus ring */
+    --ring: 217 91% 60%;
+    
+    /* Rounded corners for modern look */
+    --radius: 1.2rem;
+    
+    /* Chart colors with glass variants */
+    --chart-1: 217 91% 60%;
+    --chart-2: 170 100% 50%;
+    --chart-3: 260 84% 65%;
+    --chart-4: 28 80% 55%;
+    --chart-5: 343 85% 60%;
+    
+    /* Enhanced sidebar with glass morphism */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 217 33% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 40% 98% / 0.08;
+    --sidebar-ring: var(--ring);
+    --sidebar-glass: 210 40% 98% / 0.02;
+    
+    /* Glass effect variables */
+    --glass-bg: 210 40% 98% / 0.03;
+    --glass-border: 210 40% 98% / 0.08;
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --glass-shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.16);
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/[0.03] border border-white/[0.08];
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] rounded-xl;
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-intense {
+    @apply backdrop-blur-2xl bg-white/[0.05] border border-white/[0.12];
+    box-shadow: var(--glass-shadow-lg);
+  }
+  
+  .glass-button {
+    @apply backdrop-blur-lg bg-white/[0.05] border border-white/[0.1] hover:bg-white/[0.08];
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-input {
+    @apply backdrop-blur-lg bg-white/[0.02] border border-white/[0.1] focus:border-white/[0.2] focus:bg-white/[0.04];
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px currentColor;
+  }
+  
+  .text-glow-subtle {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
